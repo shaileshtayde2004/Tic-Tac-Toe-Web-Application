@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin-top: 50px;
+}
+
+h1 {
+    color: #333;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* Fixed size columns */
+    gap: 5px;
+    justify-content: center;
+    margin: auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(4, 201, 178);
+    border: 2px solid #333;
+    font-size: 60px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.cell.disabled {
+    pointer-events: none;
+    background-color: #eee;
+}
+
+.cell.win {
+    background-color: #90ee90;
+}
+
+#status {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#status.win {
+    color: green;
+}
+
+#status.draw {
+    color: orange;
+}
+
+#status.turn {
+    color: blue;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
